@@ -14,14 +14,14 @@
 
             <nav>
                 <a href="/">HOME</a>
-                <a href="/movie">MOVIES</a>
+                <a href="#">MOVIES</a>
                 <a href="#">GAMES</a>
                 <a href="#">PARTY GAMES</a>
             </nav>
 
             <main>
-                <h1>let's meat</h1>
-                <p>We love sharing good food with great people. We bring over 30 years industry experience and passion to Adare. With dishes that are carefully designed to bring you truly satisfying Irish food experience that you are sure to remember.</p>
+                <h1>let's watch</h1>
+                <p>Are you bored? Have you seen every movie on your watchlist? Let faith decide what movie you'll watch next</p>
                 <a href="mailto:daniel@mywebsite.com?Subject=Reservation">MAKE RESERVATION</a>
             </main>
 
