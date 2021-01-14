@@ -11,6 +11,7 @@
             <header>
                 <img src="{{ asset('images/yoda.png') }}" alt="Logo for Adare Restaurant">
             </header>
+            <<h1>{{ $quote }} </h1>
 
             <nav>
                 <a href="/">HOME</a>

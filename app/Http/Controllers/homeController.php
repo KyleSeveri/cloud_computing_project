@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\SOAP\MovieQuote;
+use App\SOAP\MovieQuoteOrigin;
+use Artisaninweb\SoapWrapper\SoapWrapper;   
 
 class homeController extends Controller
 {
@@ -10,15 +13,16 @@ class homeController extends Controller
     {
         $sw = new SoapWrapper();
         $sw->add("QuoteProvider",  function ($service) {
-        $service->wsdl("http://localhost:55112/QuoteProvider.asmx?WSDL") 
+        $service->wsdl("https://quoteprovider.azurewebsites.net/QuoteProvider.asmx?WSDL") 
                    ->trace(true)
                    ->classmap([
-                   QuoteOfTheDay::class
+                   MovieQuote::class
                    ]);
         });
         // vanaf hier gebruiken we de SOAP wrapper
-        $response = $sw->call("QuoteProvider.GetSnack", [new QuoteOfTheDay("Action")]);
-        $quote = $response->GetSnackResult;
-        return view('movie');
+        $response = $sw->call("QuoteProvider.GetRandomMovieQuote");
+        $quote = $response->GetRandomMovieQuoteResult;
+        return view('movie')->with("quote", $quote);
+                        
     }
 }
