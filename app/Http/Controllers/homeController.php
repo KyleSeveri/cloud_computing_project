@@ -22,7 +22,7 @@ class homeController extends Controller
         // vanaf hier gebruiken we de SOAP wrapper
         $response = $sw->call("QuoteProvider.GetRandomMovieQuote");
         $quote = $response->GetRandomMovieQuoteResult;
-        return view('movie')->with("quote", $quote);
+        return view('welcome')->with("quote", $quote);
                         
     }
 }
