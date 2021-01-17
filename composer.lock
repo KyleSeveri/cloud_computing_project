@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dcb2df87e8b3993ca52ecd1debea9397",
+    "content-hash": "e9071036a91c6dabafd8b3ec9e454a78",
     "packages": [
         {
             "name": "artisaninweb/laravel-soap",
@@ -755,6 +755,10 @@
                 "rest",
                 "web service"
             ],
+            "support": {
+                "issues": "https://github.com/guzzle/guzzle/issues",
+                "source": "https://github.com/guzzle/guzzle/tree/7.2.0"
+            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
