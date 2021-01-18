@@ -11,7 +11,7 @@ function zoek() {
     // omdat we POST-methode moeten we de parameters in de request steken
     var title = document.getElementById("insert").value;
     
-    var url = "http://www.omdbapi.com/?i=tt3896198&apikey=8b53f951&plot=full&t=" + title;
+    var url = "https://www.omdbapi.com/?i=tt3896198&apikey=8b53f951&plot=full&t=" + title;
     
     fetch(url)
        .then(response => response.json())
