@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" 
+                src="{{ asset('javascript.js') }}"></script>
         <title>Lockdown activities</title>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
@@ -19,12 +21,20 @@
                 <a href="/game">GAMES</a>
                 <a href="/api/drinkingGames">PARTY GAMES</a>
             </nav>
+            
+            <div style="clear:both">
+                <form name="zoekFilm">
+                    <input name="insertMovie" id="insert" type="string"/>
+                    @csrf
+                    <button type="button" onclick="zoek()">Search movie</button>
+                </form>
+            </div>
 
             <main>
-                <h1>Title:{{ $movieTitle }}</h1>
+                <h1 id="title">Title:{{ $movieTitle }}</h1>
                 <h2>Genre: {{ $genre }}      Release date: {{ $date }}</h2>
                 <h2>Recommended snack: {{ $snack }}</h2>
-                <p>Description: {{ $movieDescription }}</p>
+                <p id="description">Description: {{ $movieDescription }}</p>
                 
             </main>
 
