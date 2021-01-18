@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" 
-                src="{{ asset('javascript.js') }}"></script>
+                src="{{ asset('partyGames.js') }}"></script>
         <title>Lockdown activities</title>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
@@ -21,20 +21,31 @@
                 <a href="/game">GAMES</a>
                 <a href="/party">PARTY GAMES</a>
             </nav>
-            
-            <div style="clear:both">
-                <form name="zoekFilm">
+              <div style="clear:both">
+                <form name="zoekPartyGame">
                     <input name="insertMovie" id="insert" type="string"/>
                     @csrf
-                    <button type="button" onclick="zoek()">Search movie</button>
+                    <button type="button" onclick="zoekGames()">Search party game</button>
+                </form>
+            </div>
+             <div style="clear:both">
+                <form name="zoekPartyGame"> 
+                    @csrf
+                    <button type="button" onclick="allGames()">Random party game</button>
+                </form>
+            </div>
+                <div style="clear:both">
+                 <form name="giveRating">
+                    <input name="insertRating" id="giveRating" type="string"/>
+                    @csrf
+                    <button type="button" onclick="rate()">Rating out of 10</button>
                 </form>
             </div>
 
             <main>
-                <h1 id="title">Title:{{ $movieTitle }}</h1>
-                <h2>Genre: {{ $genre }}      Release date: {{ $date }}</h2>
-                <h2>Recommended snack: {{ $snack }}</h2>
-                <p id="description">Description: {{ $movieDescription }}</p>
+                <h1 id="title"></h1>
+                <p id="description"></p>
+                <p id="ratingAverage"></p>
                 
             </main>
 

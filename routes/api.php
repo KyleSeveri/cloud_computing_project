@@ -21,5 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('drinkingGames', 'App\Http\Controllers\ApiController@getAllDrinkingGames');
 Route::get('drinkingGames/{id}', 'App\Http\Controllers\ApiController@getDrinkingGame');
 Route::post('drinkingGames', 'App\Http\Controllers\ApiController@createDrinkingGame');
-Route::put('drinkingGames/{id}/{rating}/', 'App\Http\Controllers\ApiController@updateRatingDrinkingGame');
+Route::post('drinkingGames/{id}/{rating}', 'App\Http\Controllers\ApiController@updateRatingDrinkingGame');
 Route::delete('drinkingGames/{id}/', 'App\Http\Controllers\ApiController@deleteDrinkingGame');
