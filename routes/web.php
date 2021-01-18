@@ -18,4 +18,4 @@ Route::get('/', 'App\Http\Controllers\homeController@goMovie');
 
 Route::get("/movie", 'App\Http\Controllers\MovieController@index');
 
-Route::get("/games", 'App\Http\Controllers\GameController@index');
+Route::get("/game", 'App\Http\Controllers\GameController@index');
