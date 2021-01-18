@@ -12,8 +12,8 @@ class GameController extends Controller
     public function index(){
        
         
-        $games = Game::where('aggregated_rating', '>=', 90)->limit(150)->get();
-        $random = rand(0,150);
+        $games = Game::where('aggregated_rating', '>=', 90)->limit(100)->get();
+        $random = rand(0,100);
         $name = (json_encode($games[$random]['name']));
         $summary = (json_encode($games[$random]['summary']));
         $url = (json_encode($games[$random]['url']));
