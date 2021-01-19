@@ -28,10 +28,10 @@ class homeController extends Controller
     }
     
     public function partyGames(){
-        
-        //$response =  Http::get('https://lockdownactivites.azurewebsites.net/api/drinkingGames/1');
-       // print_r(json_decode($response)[name]);
-        //die();
         return view('partyGames');
+    }
+    
+    public function serie(){
+        return view('serie');
     }
 }

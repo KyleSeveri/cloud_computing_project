@@ -21,3 +21,5 @@ Route::get("/movie", 'App\Http\Controllers\MovieController@index');
 Route::get("/game", 'App\Http\Controllers\GameController@index');
 
 Route::get("/party", 'App\Http\Controllers\homeController@partyGames');
+
+Route::get("/serie", 'App\Http\Controllers\SerieController@index');

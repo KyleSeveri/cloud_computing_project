@@ -15,6 +15,7 @@
             <nav>
                 <a href="/">HOME</a>
                 <a href="/movie">MOVIES</a>
+                <a href="/serie">SERIES</a>
                 <a href="/game">GAMES</a>
                 <a href="/party">PARTY GAMES</a>
             </nav>
