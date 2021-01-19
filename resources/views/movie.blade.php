@@ -11,7 +11,7 @@
     <body class="antialiased">
         <div class="container">
             <header>
-                <img src="{{ asset('images/yoda.png') }}" alt="Logo for Adare Restaurant">
+                <img src="{{ asset('images/yoda.png') }}" alt="Lockdown activities logo">
             </header>
             
             
@@ -47,7 +47,11 @@
                     @csrf
                     <button type="button" onclick="ratemovie()">Rate movie</button>
                 </form>
-            </div>  
+            </div>
+            
+            <footer>
+                <p>Florian Coenen - Kyle Severi - Copyright 20170</p>
+            </footer>
         </div>
     </body>
 </html>

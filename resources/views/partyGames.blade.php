@@ -11,7 +11,7 @@
     <body class="antialiased">
         <div class="container">
             <header>
-                <img src="{{ asset('images/yoda.png') }}" alt="Logo for Adare Restaurant">
+                <img src="{{ asset('images/yoda.png') }}" alt="Lockdown activities logo">
             </header>
           
 
@@ -33,6 +33,14 @@
                     @csrf
                     <button type="button" onclick="allGames()">Random party game</button>
                 </form>
+
+            <div>
+                <h1 id="title"></h1>
+                <p id="description"></p>
+                <p id="ratingAverage"></p>
+                
+            </div>
+            
             </div>
                 <div style="clear:both">
                  <form name="giveRating">
@@ -41,16 +49,11 @@
                     <button type="button" onclick="rate()">Rating out of 10</button>
                 </form>
             </div>
-
-            <div>
-                <h1 id="title"></h1>
-                <p id="description"></p>
-                <p id="ratingAverage"></p>
-                
-            </div>
-
-
-                
+            
+            <footer>
+                <p>Florian Coenen - Kyle Severi - Copyright 20170</p>
+            </footer>
+    
         </div>
     </body>
 </html>

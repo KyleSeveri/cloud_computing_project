@@ -9,7 +9,7 @@
     <body class="antialiased">
         <div class="container">
             <header>
-                <img src="{{ asset('images/yoda.png') }}" alt="Logo for Adare Restaurant">
+                <img src="{{ asset('images/yoda.png') }}" alt="Lockdown activities logo">
             </header>
           
 
@@ -26,8 +26,10 @@
                 <p>Description: {{ $summary }}</p>
                 
             </div>
-
-
+            
+            <footer>
+                <p>Florian Coenen - Kyle Severi - Copyright 20170</p>
+            </footer>
            
         </div>
     </body>
