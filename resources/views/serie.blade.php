@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" 
-                src="{{ asset('partyGames.js') }}"></script>
+                src="{{ asset('javascript.js') }}"></script>
         <title>Lockdown activities</title>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
@@ -13,8 +13,8 @@
             <header>
                 <img src="{{ asset('images/yoda.png') }}" alt="Lockdown activities logo">
             </header>
-          
-
+            
+            
             <nav>
                 <a href="/">HOME</a>
                 <a href="/movie">MOVIES</a>
@@ -22,39 +22,37 @@
                 <a href="/game">GAMES</a>
                 <a href="/party">PARTY GAMES</a>
             </nav>
-              <div style="clear:both">
-                <form name="zoekPartyGame">
-                    <input name="insertMovie" id="insert" type="string"/>
+            
+            <div style="clear:both">
+                <form name="zoekSerie">
+                    <input name="insertSerie" id="insert" type="string"/>
                     @csrf
-                    <button type="button" onclick="zoekGames()">Search party game</button>
+                    <button type="button" onclick="zoek()">Search serie</button>
+                    <button type="button" onclick="randomserie()">Random serie</button>
                 </form>
             </div>
-             <div style="clear:both">
-                <form name="zoekPartyGame"> 
-                    @csrf
-                    <button type="button" onclick="allGames()">Random party game</button>
-                </form>
 
             <div>
-                <h1 id="title"></h1>
-                <p id="description"></p>
-                <p id="ratingAverage"></p>
+                <h1 id="title">Title:{{ $movieTitle }}</h1>
+                <h2 id="genre">Genre: {{ $genre }} </h2>
+                <h2 id="date">Release date: {{ $date }}</h2>
+                <h2>Recommended snack: {{ $snack }}</h2>
+                <p id="description">Description: {{ $movieDescription }}</p>
                 
             </div>
             
-            </div>
-                <div style="clear:both">
-                 <form name="giveRating">
-                    <input name="insertRating" id="giveRating" type="string"/>
+            <div style="clear:both">
+                <form name="rateFilm">
+                    Binge rating: <h3 id="bingerating"></h3>
+                    <input name="insertScore" id="bingescore" type="integer"/>
                     @csrf
-                    <button type="button" onclick="rate()">Rating out of 10</button>
+                    <button type="button" onclick="rateserie()">Rate serie</button>
                 </form>
             </div>
             
             <footer>
                 <p>Florian Coenen - Kyle Severi - Copyright 20170</p>
             </footer>
-    
         </div>
     </body>
 </html>

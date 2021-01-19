@@ -126,6 +126,107 @@ function insertJsonIntoView(film) {
     document.getElementById("date").innerHTML = "Release date: " + film.results[randomMovie].release_date;
 }
 
+function randomserie() {
+    //REST-service oproepen
+    // URL definieren
+    // omdat we POST-methode moeten we de parameters in de request steken
+    
+    var randomPage = Math.floor(Math.random() * 101)+1;
+    
+    var url = "https://api.themoviedb.org/3/discover/tv?api_key=fb4817418d08c8e2729a3ffab3bf1b8a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=" + randomPage;
+    
+    fetch(url)
+       .then(response => response.json())
+       .then(json => insertJsonIntoViewSerie(json));
+}
+
+function insertJsonIntoViewSerie(serie) {
+    var randomMovie = Math.floor(Math.random() * 20);
+    document.getElementById("title").innerHTML = serie.results[randomMovie].name;
+    document.getElementById("description").innerHTML = serie.results[randomMovie].overview;
+    var genre_id = serie.results[randomMovie].genre_ids[0];
+    var genre;
+    
+    if (genre_id == 28)
+        {
+            genre = "Action";
+        }
+        else if (genre_id == 12)
+        {
+            genre = "Adventure";
+        }
+        else if (genre_id == 16)
+        {
+            genre = "Animation";
+        }
+        else if (genre_id == 35)
+        {
+            genre = "Comedy";
+        }
+        else if (genre_id == 80)
+        {
+            genre = "Crime";
+        }
+        else if (genre_id == 99)
+        {
+            genre = "Documentary";
+        }
+        else if (genre_id == 18)
+        {
+            genre = "Drama";
+        }
+        else if (genre_id == 10751)
+        { 
+            genre = "Family";
+        }
+        else if (genre_id == 14)
+        {
+            genre = "Fantasy";
+        }
+        else if (genre_id == 36)
+        {
+            genre = "History";
+        }
+        else if (genre_id == 27)
+        {
+            genre = "Horror";
+        }
+        else if (genre_id == 10402)
+        {
+            genre = "Music";
+        }
+        else if (genre_id == 9648)
+        {
+            genre = "Mystery";
+        }
+        else if (genre_id == 10749)
+        {
+            genre = "Romance";
+        }
+        else if (genre_id == 878)
+        {
+            genre = "Science Fiction";
+        }
+        else if (genre_id == 10770)
+        {
+            genre = "TV Movie";
+        }
+        else if (genre_id == 53)
+        {
+            genre = "Thriller";
+        }
+        else if (genre_id == 10752)
+        {
+            genre = "War";
+        }
+        else
+        {
+            genre = "Western";
+        }
+    document.getElementById("genre").innerHTML = "Genre: " + genre;
+    document.getElementById("date").innerHTML = "Release date: " + serie.results[randomMovie].first_air_date;
+}
+
 function ratemovie() {
     //REST-service oproepen
     // URL definieren
