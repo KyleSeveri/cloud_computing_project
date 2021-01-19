@@ -42,17 +42,15 @@
                 </form>
             </div>
 
-            <main>
+            <div>
                 <h1 id="title"></h1>
                 <p id="description"></p>
                 <p id="ratingAverage"></p>
                 
-            </main>
+            </div>
 
 
-            <footer>
-                <p>Main St. Blackabbey. Adare. Co. Limerick - Copyright 20170</p>
-            </footer>
+                
         </div>
     </body>
 </html>

@@ -20,17 +20,15 @@
                 <a href="/party">PARTY GAMES</a>
             </nav>
 
-            <main>
+            <div>
                 <h1>Title:{{ $name }}</h1>
-                <h2>URL: {{ $url }}></a></h2>
+                <h2>More info: {{ $url }}</a></h2>
                 <p>Description: {{ $summary }}</p>
                 
-            </main>
+            </div>
 
 
-            <footer>
-                <p>Main St. Blackabbey. Adare. Co. Limerick - Copyright 20170</p>
-            </footer>
+           
         </div>
     </body>
 </html>

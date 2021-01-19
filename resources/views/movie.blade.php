@@ -27,18 +27,18 @@
                     <input name="insertMovie" id="insert" type="string"/>
                     @csrf
                     <button type="button" onclick="zoek()">Search movie</button>
-                    <button type="button" onclick="random()">Search movie</button>
+                    <button type="button" onclick="random()">Random movie</button>
                 </form>
             </div>
 
-            <main>
+            <div>
                 <h1 id="title">Title:{{ $movieTitle }}</h1>
                 <h2 id="genre">Genre: {{ $genre }} </h2>
                 <h2 id="date">Release date: {{ $date }}</h2>
                 <h2>Recommended snack: {{ $snack }}</h2>
                 <p id="description">Description: {{ $movieDescription }}</p>
                 
-            </main>
+            </div>
             
             <div style="clear:both">
                 <form name="rateFilm">
@@ -47,12 +47,7 @@
                     @csrf
                     <button type="button" onclick="ratemovie()">Rate movie</button>
                 </form>
-            </div>
-
-
-            <footer>
-                <p>Main St. Blackabbey. Adare. Co. Limerick - Copyright 20170</p>
-            </footer>
+            </div>  
         </div>
     </body>
 </html>

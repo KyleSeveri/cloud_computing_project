@@ -98,8 +98,8 @@ function insertJsonIntoDivRating(partyGame) {
     
     
     document.getElementById("title").innerHTML = partyGame[index].name;
-    document.getElementById("description").innerHTML = partyGame[index].description;
-    document.getElementById("ratingAverage").innerHTML = partyGame[index].rating;
+    document.getElementById("description").innerHTML = "Challenge: " + partyGame[index].description;
+    document.getElementById("ratingAverage").innerHTML = "Rating: " + partyGame[index].rating;
   
 }
 
@@ -112,8 +112,8 @@ function insertJsonIntoDiv(partyGame) {
     
     
     document.getElementById("title").innerHTML = partyGame[index].name;
-    document.getElementById("description").innerHTML = partyGame[index].description;
-    document.getElementById("ratingAverage").innerHTML = partyGame[index].rating;
+    document.getElementById("description").innerHTML ="Challenge: " + partyGame[index].description;
+    document.getElementById("ratingAverage").innerHTML ="Rating: " + partyGame[index].rating;
   
 }
 function insertJsonIntoDivZoek(partyGame) {
@@ -131,8 +131,8 @@ function insertJsonIntoDivZoek(partyGame) {
     
     
     document.getElementById("title").innerHTML = partyGame[index].name;
-    document.getElementById("description").innerHTML = partyGame[index].description;
-    document.getElementById("ratingAverage").innerHTML = partyGame[index].rating;
+    document.getElementById("description").innerHTML ="Challenge: " + partyGame[index].description;
+    document.getElementById("ratingAverage").innerHTML = "Rating: " + partyGame[index].rating;
   
 }
 

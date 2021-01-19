@@ -122,8 +122,8 @@ function insertJsonIntoView(film) {
         {
             genre = "Western";
         }
-    document.getElementById("genre").innerHTML = genre;
-    document.getElementById("date").innerHTML = film.results[randomMovie].release_date;
+    document.getElementById("genre").innerHTML = "Genre: " + genre;
+    document.getElementById("date").innerHTML = "Release date: " + film.results[randomMovie].release_date;
 }
 
 function ratemovie() {
