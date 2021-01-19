@@ -26,7 +26,7 @@
                 </p>
             </main>
             
-            <<h1>{{ $quote }} </h1>
+            <h1>{{ $quote }} </h1>
 
             <footer>
                 <p>Florian Coenen - Kyle Severi - Copyright 20170</p>
