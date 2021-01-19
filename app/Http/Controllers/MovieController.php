@@ -111,7 +111,7 @@ class MovieController extends Controller
                    Snack::class
                    ]);
         });
-        // vanaf hier gebruiken we de SOAP wrapper
+        
         $response = $sw->call("SnackProvider.GetSnack", [new Snack($genre_id)]);
         $snack = $response->GetSnackResult;
         
